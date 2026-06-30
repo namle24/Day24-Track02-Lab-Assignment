@@ -1,0 +1,11 @@
+trufflehog was not installed in the local environment, so no verified secret findings
+were produced by the CLI in this run.
+
+Manual substitute checks completed:
+- Bandit SAST report generated at reports/bandit_report.json.
+- Pre-commit hook template exists at .github/hooks/pre-commit and calls git-secrets,
+  Bandit, and pip-audit.
+- Raw PII CSV and .vault_key are excluded by .gitignore.
+
+Manual command to rerun when trufflehog is available:
+trufflehog git file://. --only-verified

@@ -1,0 +1,61 @@
+{
+  "expectation_suite": {
+    "suite_name": "patient_data_suite",
+    "expectations": [
+      {
+        "column": "patient_id",
+        "expectation": "not_null"
+      },
+      {
+        "column": "cccd",
+        "expectation": "length_equals",
+        "value": 12
+      },
+      {
+        "column": "ket_qua_xet_nghiem",
+        "expectation": "between",
+        "min_value": 0,
+        "max_value": 50
+      },
+      {
+        "column": "benh",
+        "expectation": "in_set",
+        "value_set": [
+          "Tiểu đường",
+          "Huyết áp cao",
+          "Tim mạch",
+          "Khỏe mạnh"
+        ]
+      },
+      {
+        "column": "email",
+        "expectation": "matches_regex",
+        "regex": "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"
+      },
+      {
+        "column": "patient_id",
+        "expectation": "unique"
+      }
+    ]
+  },
+  "validation": {
+    "success": true,
+    "failed_checks": [],
+    "stats": {
+      "total_rows": 200,
+      "columns": [
+        "patient_id",
+        "ho_ten",
+        "cccd",
+        "so_dien_thoai",
+        "email",
+        "dia_chi",
+        "benh",
+        "ket_qua_xet_nghiem",
+        "bac_si_phu_trach",
+        "ngay_kham",
+        "nam_sinh"
+      ]
+    }
+  }
+}

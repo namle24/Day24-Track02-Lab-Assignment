@@ -1,0 +1,5 @@
+bob raw denied: 403
+alice raw allowed: 200
+bob anonymized allowed: 200
+carol metrics allowed: 200
+bob delete denied: 403

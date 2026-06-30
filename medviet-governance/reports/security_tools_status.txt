@@ -1,0 +1,15 @@
+Security tooling status for local lab validation
+
+Available and executed:
+- bandit: reports/bandit_report.json generated successfully with exit code 0.
+
+Not installed in the base environment:
+- trufflehog
+- opa
+- git-secrets
+- pip-audit
+
+Repo-side artifacts still provided:
+- .github/hooks/pre-commit contains git-secrets, Bandit, and pip-audit checks.
+- policies/opa_policy.rego contains the ABAC rules required by the README.
+- reports/api_rbac_smoke.txt verifies the expected RBAC allow/deny behavior.
